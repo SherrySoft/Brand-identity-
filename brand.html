@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -28,6 +28,9 @@
           <li><a href="index.html#approach">Approach</a></li>
           <li><a href="brand.html" aria-current="page">Brand Identity</a></li>
           <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-mobile-cta-item">
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+          </li>
         </ul>
       </nav>
 
@@ -40,9 +43,8 @@
   <main>
     <section class="page-hero" aria-labelledby="brand-page-heading">
       <div class="container">
-        <p class="eyebrow">Brand System v1.0 // Ditervo</p>
         <h1 id="brand-page-heading" class="hero-title">
-          The visual &amp; verbal identity of <em>Ditervo</em>.
+          The visual &amp; verbal identity of <span class="accent-word">Ditervo</span>.
         </h1>
         <p class="hero-lead">
           Designed for clarity across software interfaces, AI developer documentation, investor decks, and hardware-inspired product surfaces.
@@ -53,10 +55,7 @@
     <section class="section" aria-labelledby="marks-heading">
       <div class="container">
         <div class="section-header">
-          <div>
-            <p class="eyebrow">01 / Logo &amp; Monogram</p>
-            <h2 id="marks-heading" class="section-title">Modular precision in two geometric forms.</h2>
-          </div>
+          <h2 id="marks-heading" class="section-title">Modular precision in two geometric forms.</h2>
           <p class="section-subtitle">
             The Ditervo mark nests a Signal Teal core inside a Mineral Ink frame—symbolizing structured engineering around applied intelligence.
           </p>
@@ -68,7 +67,7 @@
               <img src="assets/logo-full.svg" alt="Ditervo full wordmark on light surface" />
             </div>
             <h3>Light Surface Wordmark</h3>
-            <p>Use on Warm Alabaster (`#F5F3EE`) or white backgrounds with at least 24px clearspace around the lockup.</p>
+            <p>Use on Cool Mineral (<code>#EFF2F1</code>) or white backgrounds with at least 24px clearspace around the lockup.</p>
             <a id="download-logo-dark" href="assets/logo-full.svg" download="ditervo-logo-dark.svg" class="btn btn-secondary btn-sm">Download SVG</a>
           </div>
 
@@ -77,12 +76,12 @@
               <img src="assets/logo-full-light.svg" alt="Ditervo full wordmark on dark surface" />
             </div>
             <h3>Dark Surface Wordmark</h3>
-            <p>Use on Mineral Ink (`#11161A`) or dark presentation slides. Never add drop shadows or neon outer glows.</p>
+            <p>Use on Mineral Ink (<code>#11161A</code>) or dark presentation slides. Never add drop shadows or neon outer glows.</p>
             <a id="download-logo-light" href="assets/logo-full-light.svg" download="ditervo-logo-light.svg" class="btn btn-secondary btn-sm">Download SVG</a>
           </div>
         </div>
 
-        <div class="guidelines-grid" style="margin-top: 24px;">
+        <div class="guidelines-grid">
           <div class="guideline-box">
             <h3>Icon Mark &amp; Favicon</h3>
             <p style="color: var(--ink-secondary); margin-bottom: 16px;">
@@ -110,10 +109,7 @@
     <section class="section" aria-labelledby="palette-heading">
       <div class="container">
         <div class="section-header">
-          <div>
-            <p class="eyebrow">02 / Color System</p>
-            <h2 id="palette-heading" class="section-title">Tactile neutrals anchored by Signal Teal.</h2>
-          </div>
+          <h2 id="palette-heading" class="section-title">Tactile neutrals anchored by Signal Teal.</h2>
           <p class="section-subtitle">Click any swatch below to copy its hex value to your clipboard.</p>
         </div>
 
@@ -134,19 +130,19 @@
             </div>
           </button>
 
-          <button type="button" class="swatch-card" data-copy-hex="#F5F3EE" id="brand-swatch-alabaster">
-            <div class="swatch-chip" style="background-color: #F5F3EE;"></div>
+          <button type="button" class="swatch-card" data-copy-hex="#EFF2F1" id="brand-swatch-mineral">
+            <div class="swatch-chip" style="background-color: #EFF2F1;"></div>
             <div class="swatch-meta">
-              <span class="swatch-name">Warm Alabaster</span>
-              <span class="swatch-hex">#F5F3EE · Canvas</span>
+              <span class="swatch-name">Cool Mineral</span>
+              <span class="swatch-hex">#EFF2F1 · Canvas</span>
             </div>
           </button>
 
-          <button type="button" class="swatch-card" data-copy-hex="#434D56" id="brand-swatch-slate">
-            <div class="swatch-chip" style="background-color: #434D56;"></div>
+          <button type="button" class="swatch-card" data-copy-hex="#3F4952" id="brand-swatch-slate">
+            <div class="swatch-chip" style="background-color: #3F4952;"></div>
             <div class="swatch-meta">
               <span class="swatch-name">Machined Slate</span>
-              <span class="swatch-hex">#434D56 · Body Text</span>
+              <span class="swatch-hex">#3F4952 · Body Text</span>
             </div>
           </button>
         </div>
@@ -156,27 +152,24 @@
     <section class="section" aria-labelledby="typography-heading">
       <div class="container">
         <div class="section-header">
-          <div>
-            <p class="eyebrow">03 / Typography &amp; Voice</p>
-            <h2 id="typography-heading" class="section-title">Structured hierarchy with editorial warmth.</h2>
-          </div>
+          <h2 id="typography-heading" class="section-title">Structured hierarchy built for technical clarity.</h2>
         </div>
 
         <div class="type-specimen">
           <div class="type-row">
-            <span class="type-tag">DISPLAY // PLUS JAKARTA SANS</span>
+            <span class="type-tag">DISPLAY // ARCHIVO 700</span>
             <div style="font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;">
               Intelligent software, engineered from first principles.
             </div>
           </div>
           <div class="type-row">
-            <span class="type-tag">EDITORIAL ACCENT // NEWSREADER</span>
-            <div style="font-family: var(--font-serif); font-style: italic; font-size: 1.65rem; color: var(--accent);">
-              Clarity, determinism, and craft at scale.
+            <span class="type-tag">BODY // ARCHIVO 400</span>
+            <div style="font-size: 1.05rem; color: var(--ink-secondary); max-width: 60ch;">
+              Clean, legible proportions designed for product interfaces, technical documentation, and long-form engineering briefs.
             </div>
           </div>
           <div class="type-row">
-            <span class="type-tag">TECHNICAL SPEC // JETBRAINS MONO</span>
+            <span class="type-tag">TECHNICAL SPEC // IBM PLEX MONO</span>
             <div style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--ink-secondary);">
               DITERVO // AI SYSTEMS · SOFTWARE · ARCHITECTURE // v1.0
             </div>

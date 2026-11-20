@@ -1,10 +1,19 @@
 /**
- * Ditervo — Interactive helpers for navigation, color swatch copying,
- * SVG asset downloads, and static-site inquiry form handling.
+ * Ditervo — Interactive helpers for accessible navigation, color swatch
+ * copying, and static-site inquiry form validation.
  */
 (function () {
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
+
+  function closeNav(returnFocus) {
+    if (!navToggle || !navMenu) return;
+    navToggle.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("is-open");
+    if (returnFocus) {
+      navToggle.focus();
+    }
+  }
 
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
@@ -14,10 +23,13 @@
     });
 
     navMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navToggle.setAttribute("aria-expanded", "false");
-        navMenu.classList.remove("is-open");
-      });
+      link.addEventListener("click", () => closeNav(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navMenu.classList.contains("is-open")) {
+        closeNav(true);
+      }
     });
   }
 
@@ -46,22 +58,54 @@
     });
   });
 
-  // Static inquiry form handling (GitHub Pages compatible)
+  // Static inquiry form handling with aria-invalid and focus management
   const inquiryForm = document.getElementById("inquiry-form");
   const formStatus = document.getElementById("form-status");
 
   if (inquiryForm && formStatus) {
+    const requiredFields = [
+      document.getElementById("contact-name"),
+      document.getElementById("contact-email"),
+      document.getElementById("contact-message"),
+    ].filter(Boolean);
+
+    requiredFields.forEach((field) => {
+      field.addEventListener("input", () => {
+        if (field.value.trim()) {
+          field.removeAttribute("aria-invalid");
+        }
+      });
+    });
+
     inquiryForm.addEventListener("submit", (event) => {
       event.preventDefault();
+      let firstInvalid = null;
+
+      requiredFields.forEach((field) => {
+        const isEmail = field.type === "email";
+        const valid =
+          field.value.trim().length > 0 &&
+          (!isEmail || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim()));
+        if (!valid) {
+          field.setAttribute("aria-invalid", "true");
+          if (!firstInvalid) firstInvalid = field;
+        } else {
+          field.removeAttribute("aria-invalid");
+        }
+      });
+
+      if (firstInvalid) {
+        formStatus.classList.add("is-error");
+        formStatus.textContent = "Please complete your name, a valid email, and a short project brief.";
+        firstInvalid.focus();
+        return;
+      }
+
+      formStatus.classList.remove("is-error");
       const name = document.getElementById("contact-name").value.trim();
       const email = document.getElementById("contact-email").value.trim();
       const topic = document.getElementById("contact-topic").value;
       const message = document.getElementById("contact-message").value.trim();
-
-      if (!name || !email || !message) {
-        formStatus.textContent = "Please complete your name, email, and project brief.";
-        return;
-      }
 
       const subject = encodeURIComponent(`[Ditervo Inquiry] ${topic} — ${name}`);
       const body = encodeURIComponent(
