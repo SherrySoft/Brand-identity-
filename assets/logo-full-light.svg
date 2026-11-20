@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none" role="img" aria-label="Ditervo full light wordmark">
+  <path d="M8 8H28C38.4934 8 46 15.5066 46 26V30C46 40.4934 38.4934 48 28 48H8V8Z" stroke="#F4F2EC" stroke-width="4"/>
+  <path d="M17 17H27C32.5228 17 36.5 20.9772 36.5 26.5V29.5C36.5 35.0228 32.5228 39 27 39H17V17Z" fill="#2A918D"/>
+  <rect x="17" y="17" width="6" height="22" fill="#F4F2EC"/>
+  <text x="64" y="38" fill="#F4F2EC" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.03em">Ditervo</text>
+</svg>

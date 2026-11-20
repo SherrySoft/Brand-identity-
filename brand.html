@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ditervo Brand Identity &amp; Design Guidelines</title>
+  <meta name="description" content="Official brand identity system for Ditervo: vector marks, color tokens, typography scale, and usage guidelines." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-link" aria-label="Ditervo Home">
+        <img src="assets/logo-mark.svg" alt="" width="30" height="30" />
+        <span>Ditervo</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          Menu
+        </button>
+        <ul id="nav-menu" class="nav-links">
+          <li><a href="index.html#capabilities">Capabilities</a></li>
+          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="brand.html" aria-current="page">Brand Identity</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a id="brand-back-home" href="index.html" class="btn btn-secondary btn-sm">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="brand-page-heading">
+      <div class="container">
+        <p class="eyebrow">Brand System v1.0 // Ditervo</p>
+        <h1 id="brand-page-heading" class="hero-title">
+          The visual &amp; verbal identity of <em>Ditervo</em>.
+        </h1>
+        <p class="hero-lead">
+          Designed for clarity across software interfaces, AI developer documentation, investor decks, and hardware-inspired product surfaces.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="marks-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">01 / Logo &amp; Monogram</p>
+            <h2 id="marks-heading" class="section-title">Modular precision in two geometric forms.</h2>
+          </div>
+          <p class="section-subtitle">
+            The Ditervo mark nests a Signal Teal core inside a Mineral Ink frame—symbolizing structured engineering around applied intelligence.
+          </p>
+        </div>
+
+        <div class="brand-showcase">
+          <div class="brand-panel">
+            <div class="logo-stage">
+              <img src="assets/logo-full.svg" alt="Ditervo full wordmark on light surface" />
+            </div>
+            <h3>Light Surface Wordmark</h3>
+            <p>Use on Warm Alabaster (`#F5F3EE`) or white backgrounds with at least 24px clearspace around the lockup.</p>
+            <a id="download-logo-dark" href="assets/logo-full.svg" download="ditervo-logo-dark.svg" class="btn btn-secondary btn-sm">Download SVG</a>
+          </div>
+
+          <div class="brand-panel brand-panel-dark">
+            <div class="logo-stage">
+              <img src="assets/logo-full-light.svg" alt="Ditervo full wordmark on dark surface" />
+            </div>
+            <h3>Dark Surface Wordmark</h3>
+            <p>Use on Mineral Ink (`#11161A`) or dark presentation slides. Never add drop shadows or neon outer glows.</p>
+            <a id="download-logo-light" href="assets/logo-full-light.svg" download="ditervo-logo-light.svg" class="btn btn-secondary btn-sm">Download SVG</a>
+          </div>
+        </div>
+
+        <div class="guidelines-grid" style="margin-top: 24px;">
+          <div class="guideline-box">
+            <h3>Icon Mark &amp; Favicon</h3>
+            <p style="color: var(--ink-secondary); margin-bottom: 16px;">
+              Use the standalone Ditervo monogram for app icons, social avatars, GitHub organization profiles, and browser favicons.
+            </p>
+            <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+              <img src="assets/logo-mark.svg" alt="Ditervo icon mark" width="48" height="48" />
+              <img src="assets/favicon.svg" alt="Ditervo rounded favicon" width="48" height="48" />
+              <a id="download-logo-mark" href="assets/logo-mark.svg" download="ditervo-mark.svg" class="btn btn-secondary btn-sm">Download Mark SVG</a>
+            </div>
+          </div>
+
+          <div class="guideline-box">
+            <h3>Usage Rules</h3>
+            <ul>
+              <li>Always write the brand name in Title Case: <strong>Ditervo</strong> (or uppercase <strong>DITERVO</strong> in technical headers).</li>
+              <li>Maintain minimum clearspace equal to the height of the inner teal module.</li>
+              <li>Do not stretch, skew, recolor with gradients, or place over busy photography.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="palette-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">02 / Color System</p>
+            <h2 id="palette-heading" class="section-title">Tactile neutrals anchored by Signal Teal.</h2>
+          </div>
+          <p class="section-subtitle">Click any swatch below to copy its hex value to your clipboard.</p>
+        </div>
+
+        <div class="swatch-grid">
+          <button type="button" class="swatch-card" data-copy-hex="#11161A" id="brand-swatch-ink">
+            <div class="swatch-chip" style="background-color: #11161A;"></div>
+            <div class="swatch-meta">
+              <span class="swatch-name">Mineral Ink</span>
+              <span class="swatch-hex">#11161A · Primary Ink</span>
+            </div>
+          </button>
+
+          <button type="button" class="swatch-card" data-copy-hex="#0F5C5C" id="brand-swatch-teal">
+            <div class="swatch-chip" style="background-color: #0F5C5C;"></div>
+            <div class="swatch-meta">
+              <span class="swatch-name">Signal Teal</span>
+              <span class="swatch-hex">#0F5C5C · Brand Accent</span>
+            </div>
+          </button>
+
+          <button type="button" class="swatch-card" data-copy-hex="#F5F3EE" id="brand-swatch-alabaster">
+            <div class="swatch-chip" style="background-color: #F5F3EE;"></div>
+            <div class="swatch-meta">
+              <span class="swatch-name">Warm Alabaster</span>
+              <span class="swatch-hex">#F5F3EE · Canvas</span>
+            </div>
+          </button>
+
+          <button type="button" class="swatch-card" data-copy-hex="#434D56" id="brand-swatch-slate">
+            <div class="swatch-chip" style="background-color: #434D56;"></div>
+            <div class="swatch-meta">
+              <span class="swatch-name">Machined Slate</span>
+              <span class="swatch-hex">#434D56 · Body Text</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="typography-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">03 / Typography &amp; Voice</p>
+            <h2 id="typography-heading" class="section-title">Structured hierarchy with editorial warmth.</h2>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <div class="type-row">
+            <span class="type-tag">DISPLAY // PLUS JAKARTA SANS</span>
+            <div style="font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;">
+              Intelligent software, engineered from first principles.
+            </div>
+          </div>
+          <div class="type-row">
+            <span class="type-tag">EDITORIAL ACCENT // NEWSREADER</span>
+            <div style="font-family: var(--font-serif); font-style: italic; font-size: 1.65rem; color: var(--accent);">
+              Clarity, determinism, and craft at scale.
+            </div>
+          </div>
+          <div class="type-row">
+            <span class="type-tag">TECHNICAL SPEC // JETBRAINS MONO</span>
+            <div style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--ink-secondary);">
+              DITERVO // AI SYSTEMS · SOFTWARE · ARCHITECTURE // v1.0
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo-mark.svg" alt="" width="24" height="24" />
+        <span>Ditervo</span>
+      </a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Ditervo. Brand System v1.0.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

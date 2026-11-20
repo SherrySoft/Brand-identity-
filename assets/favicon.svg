@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Ditervo favicon">
+  <rect width="64" height="64" rx="14" fill="#11161A"/>
+  <path d="M16 14H33C43.4934 14 50 20.5066 50 31V33C50 43.4934 43.4934 50 33 50H16V14Z" stroke="#F4F2EC" stroke-width="4"/>
+  <path d="M24 22H32.5C38.299 22 42 25.701 42 31.5V32.5C42 38.299 38.299 42 32.5 42H24V22Z" fill="#1E7B78"/>
+  <rect x="24" y="22" width="6" height="20" fill="#F4F2EC"/>
+</svg>
